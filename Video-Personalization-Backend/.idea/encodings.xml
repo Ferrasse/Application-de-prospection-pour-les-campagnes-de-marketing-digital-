@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Eureka-Server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Generated-Videos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Generated_personalized_video/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Generated_personalized_video/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Generated_videos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PrimaryVideo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Video/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/VideoOrigine/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/account-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client-list-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client_list_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/email-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/email-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/end-user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/generated-video-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/generated-video-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manageaccount-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manageaccount/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manageaccount/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/uploadVideo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/uploadVideos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user_service/src/main/java" charset="UTF-8" />
+  </component>
+</project>

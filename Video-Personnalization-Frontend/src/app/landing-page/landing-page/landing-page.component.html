@@ -1,0 +1,242 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .content-container {
+            max-width: 700px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border-top: 5px solid #9849d0;
+            border-bottom: 5px solid #32c7c7;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #9849d0;
+        }
+        .video-container {
+            margin-bottom: 20px;
+        }
+        video {
+            border-radius: 8px;
+            border: 2px solid #32c7c7;
+        }
+        #message-form {
+            display: flex;
+            flex-direction: column;
+        }
+        #message {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            margin-bottom: 10px;
+            resize: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button[type="submit"] {
+            background-color: #9849d0;
+            color: white;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cta-buttons button {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .cta-buttons button:last-child {
+            margin-right: 0;
+        }
+        .cta-buttons .buy-button {
+            background-color: #9849d0;
+            color: white;
+        }
+        .cta-buttons .see-button {
+            background-color: #32c7c7;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .drag-container {
+            width: 400px;
+            height: calc(100vh - 40px);
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .drag-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px dashed #ced4da;
+            border-radius: 4px;
+            text-align: center;
+            cursor: move;
+        }
+        .drop-zone {
+            flex-grow: 1;
+            padding: 20px;
+            border: 2px dashed #32c7c7;
+            border-radius: 4px;
+            text-align: center;
+            color: #32c7c7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Welcome to our website</h1>
+        
+        <div class="video-container">
+            <video [src]="videoURL" controls autoplay width="100%"></video>
+        </div>
+        <form id="message-form" (submit)="onSubmit($event)">
+            <textarea id="message" placeholder="Saisissez votre message ici" rows="4"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="cta-buttons">
+            <button class="buy-button" (click)="acheterArticle()">Buy the item</button> 
+            <button class="see-button" (click)="voireAutreArticle()">See another item</button>
+        </div>
+    </div>
+
+    <div class="drag-container">
+        <div class="drag-item" *ngFor="let item of items" cdkDrag>{{ item }}</div>
+        <div class="drop-zone" cdkDropList (cdkDropListDropped)="drop($event)">Drop items here</div>
+    </div>
+
+    <script src="https://unpkg.com/@angular/core@10.0.0/bundles/core.umd.js"></script>
+    <script src="https://unpkg.com/@angular/common@10.0.0/bundles/common.umd.js"></script>
+    <script src="https://unpkg.com/@angular/platform-browser@10.0.0/bundles/platform-browser.umd.js"></script>
+    <script src="https://unpkg.com/@angular/platform-browser-dynamic@10.0.0/bundles/platform-browser-dynamic.umd.js"></script>
+    <script src="https://unpkg.com/@angular/cdk@10.0.0/bundles/cdk.umd.js"></script>
+    <script src="https://unpkg.com/@angular/cdk@10.0.0/bundles/cdk-drag-drop.umd.js"></script>
+
+    <script>
+        const { Component, NgModule, enableProdMode } = ng.core;
+        const { BrowserModule } = ng.platformBrowser;
+        const { platformBrowserDynamic } = ng.platformBrowserDynamic;
+        const { DragDropModule } = ng.cdk.dragDrop;
+
+        enableProdMode();
+
+        @Component({
+            selector: 'my-app',
+            template: `
+                <div class="content-container">
+                    <h1>Welcome to our website</h1>
+                    
+                    <div class="video-container">
+                        <video [src]="videoURL" controls autoplay width="100%"></video>
+                    </div>
+                    <form id="message-form" (submit)="onSubmit($event)">
+                        <textarea id="message" placeholder="Saisissez votre message ici" rows="4"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                    <div class="cta-buttons">
+                        <button class="buy-button" (click)="acheterArticle()">Buy the item</button> 
+                        <button class="see-button" (click)="voireAutreArticle()">See another item</button>
+                    </div>
+                </div>
+
+                <div class="drag-container">
+                    <div class="drag-item" *ngFor="let item of items" cdkDrag>{{ item }}</div>
+                    <div class="drop-zone" cdkDropList (cdkDropListDropped)="drop($event)">Drop items here</div>
+                </div>
+            `
+        })
+        class AppComponent {
+            items = [
+                'Autocomplete', 'Button', 'Checkbox Group', 'Date Field', 'File Upload',
+                'Header', 'Hidden Input', 'Number', 'Paragraph', 'Radio Group',
+                'Select', 'Text Field', 'Text Area'
+            ];
+
+            videoURL = 'path_to_your_video.mp4';
+
+            acheterArticle() {
+                alert('Article acheté !');
+            }
+
+            voireAutreArticle() {
+                alert('Voir un autre article !');
+            }
+
+            onSubmit(event) {
+                event.preventDefault();
+                const message = event.target.querySelector('#message').value;
+                console.log('Message saisi :', message);
+                alert('Message envoyé : ' + message);
+            }
+
+            drop(event) {
+                console.log('Item dropped:', event);
+            }
+        }
+
+        @NgModule({
+            declarations: [AppComponent],
+            imports: [BrowserModule, DragDropModule],
+            bootstrap: [AppComponent]
+        })
+        class AppModule {}
+
+        platformBrowserDynamic().bootstrapModule(AppModule);
+    </script>
+</body>
+</html> -->
+<div class="main-container">
+    <div class="content-container">
+        <h1>Welcome to our website</h1>
+        
+        <div class="video-container">
+            <video [src]="videoURL" controls autoplay width="100%"></video>
+        </div>
+        <form id="message-form" (submit)="onSubmit($event)">
+            <textarea id="message" placeholder="Saisissez votre message ici" rows="4"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="cta-buttons">
+            <button class="buy-button" (click)="acheterArticle()">Buy the item</button> 
+            <button class="see-button" (click)="voireAutreArticle()">See another item</button>
+        </div>
+    </div>
+
+    <div class="drag-container">
+        <div *ngFor="let item of items" class="drag-item" cdkDrag>{{ item }}</div>
+    </div>
+</div>
+
+
+

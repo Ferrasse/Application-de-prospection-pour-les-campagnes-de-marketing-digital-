@@ -1,0 +1,323 @@
+<div nz-row nzGutter="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+      [nzParagraph]="{ rows: 6 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  
+
+  <!-- New project added -->
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    
+    
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full flex items-center">
+        <div class="w-1/2 px-4"> <!-- Utilisez la classe de largeur Tailwind pour spécifier la moitié de la largeur -->
+          <p class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Upload file please</p>
+        </div>
+        <div class="w-1/2 flex justify-end"> <!-- Utilisez la classe de largeur Tailwind pour spécifier la moitié de la largeur et flex pour aligner les boutons à droite -->
+          <button class="mt-2 mb-2 mr-2 text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" nz-button (click)="showNewVideo(newVideoUpload)">
+            <i nz-icon nzType="upload"></i>
+            <span class="m-0">Upload video</span>
+          </button>
+          <div class="mr-3">
+           
+          <button class="mt-2 mb-2 text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" nz-button (click)="selectCsvFile()">
+            <i nz-icon nzType="upload"></i>
+            <span class="m-0 mr-1">Upload Csv File</span>
+            <span *ngIf="selectedFileName">({{ selectedFileName }})</span>
+          </button>
+         </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  
+ 
+  <ng-template #newVideoUpload>
+    <form nz-form (ngSubmit)="onSubmitForm1()" enctype="multipart/form-data">
+    <div class="modal-wrapper">
+      <div class="modal-content">
+        <div class="row mt-3">
+          <div class="col-12 flex justify-center">
+            <label class="custom-file-upload flex items-center justify-center">
+              <input type="file" (change)="onVideoFileSelected($event)">
+              <i class="fa fa-cloud-upload mr-2"></i> 
+              <p class="text-[20px] font-medium text-dark dark:text-white/[.87]">Drag and Drop Or <strong class="text-primary">Browse</strong></p>
+            </label>
+          </div>
+        </div>
+        <div class="row mt-3" >
+        
+          <div *ngIf="videoFile && showFileName" class="flex items-center">
+            <span class="video-name text-lg text-red-500">{{ videoFile.name }}</span>
+            <button *ngIf="videoId" class="ml-auto" (click)="deleteVideo(videoId); deleteFileName()">
+              <i nz-icon nzType="delete" nzTheme="outline" class="mr-6 text-red-500"></i>
+            </button>
+          </div>
+          
+           
+        </div>
+        
+    
+      </div>
+    </div>
+  </form>
+  </ng-template>
+  
+  <!-- :End New project added -->
+
+ 
+<div nz-col nzXs="17" nzXXl="12" class=" mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <div class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+      <!-- Partie des mots-clés -->
+      <div class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+        <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Video processing</h4>
+      </div>
+      <img src="assets/images/NoVideoSelected.png" *ngIf="!showVideo && !form2IsLoding && !processingVideo">
+
+      
+      <div class="p-[25px]">
+        <div nz-col nzXs="17" nzXl="12" class="mb-[25px]">
+      
+        </div>
+        <div *ngIf="showVideo || startProcessingClicked" class="video-keywords-section">
+          <div class="content" style="margin-top: -20px;">
+            <video class="w-full h-auto max-w-full border border-gray-200 rounded-lg dark:border-gray-700" id="myVideo" width="60%" height="20%" controls (mouseover)="handleVideoMouseOver($event)">
+              <source [src]="videoUrl" type="video/mp4">
+            </video>
+          </div>
+
+          
+          <div id="tooltip" class="bg-gray-50 ml-1 mt-2 keyword-input-container" (mouseover)="cancelHideTooltip()" (mouseout)="hideTooltip($event)">
+            <label class="keyword-label" for="keywordInput">Keyword:</label>
+            <input type="text" id="keywordInput" [(ngModel)]="Selectedkeyword" class="keyword-input">
+<button nz-button class="mt-2 mb-2 text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="addOrModifyKeyword()">
+              <i nz-icon nzType="plus"></i> Add/Modify
+            </button>
+        
+       
+          </div>
+          <div id="keywordsList" class="keywords-list-container">
+            <h1 class="keywords-title">Added Keywords:</h1>
+            <ul id="keywordsUl" class="keywords-ul">
+                <li *ngFor="let keyword of addedKeywords" class="keyword-item">
+                    <span class="keyword-symbol">•</span>
+                    <span class="keyword-text mr-2">{{ keyword }}</span>
+                    <span class="keyword-actions">
+                        <i nz-icon nzType="edit" class="mr-6 edit-icon" (click)="editKeyword(keyword)" style="color:teal;"></i>
+                        <i nz-icon nzType="delete" class="mr-6 delete-icon" (click)="deleteKeyword(keyword) " style="color: red;"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+          <button nz-button class="mt-4 w-full bg-primary text-white py-2 rounded-md text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" (click)="generatePersonalizedVideos()">
+            Generate Personalized Videos
+          </button>
+        </div>
+      </div>
+      
+      <!-- Loading message -->
+      <div class="mb-18" id="form2Loading" style="display:none; margin-left: 30px;"> <div id="form2Loading" x-show="isLoading" class="flex items-center justify-center mb-10 mt-10" style="display: none; margin-left: 30px;">
+        <div class="loader"></div>
+      </div>
+      
+    </div>
+
+ 
+
+    </div>
+  </ng-container>
+</div>
+
+<div nz-col nzXs="7" nzXXl="12" class="mb-[25px]">
+  <ng-container *ngIf="showContent; else loadingSkeleton">
+    <div class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+     
+      <div class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+        <h4 class="mb-0 text-lg font-medium text-black dark:text-white/[.87]"> <i class="mt-2" nz-icon nzType="file-text"></i> Transcript</h4>
+      </div>
+      <div>
+        <pre class="ml-4 mt-3 text-black text-ellipsis ">{{ displayTranscription() }}</pre>
+      </div>
+      
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #loadingSkeleton>
+  <div class="animate-pulse flex space-x-4">
+    <div class="rounded-full bg-gray-200 h-12 w-12"></div>
+    <div class="flex-1 space-y-4 py-1">
+      <div class="h-4 bg-gray-200 rounded w-3/4"></div>
+      <div class="space-y-2">
+        <div class="h-4 bg-gray-200 rounded"></div>
+        <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+  <div nz-col nzXs="24" class=" mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+        <div class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Personalized videos</h4>
+        </div>
+        <div class="p-[25px]">
+         
+      
+
+         
+         <!-- <table *ngIf="dataList.length > 0">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Video Path</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of dataList">
+                <td>{{ item.firstName }}</td>
+                <td>{{ item.lastName }}</td>
+                <td>{{ item.videoPath }}</td>
+              </tr>
+            </tbody>
+          </table>
+       -->
+     
+
+       <div *ngIf="dataList.length > 0; else noDataMessage" class="bg-white shadow overflow-hidden sm:rounded-lg">
+        <label for="table-search mb-4" class="sr-only">Search</label>
+        <div class="flex items-center justify-between p-4">
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <input type="text" id="table-search" (input)="filterTable($event)" class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for items">
+            </div>
+            
+
+<div class="inline-flex rounded-md shadow-sm" role="group">
+  <button type="button" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/>
+      <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+    </svg>
+    
+   show primary csv
+  </button>
+  <button type="button" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/>
+      <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+    </svg>
+    
+   show primary video
+  </button>
+  <button type="button" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+    <svg class="w-3 h-3 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+      <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+    </svg>
+    Download csv
+  </button>
+</div>
+
+        </div>
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead class="mt-4 w-full bg-primary text-white py-2 rounded-md text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+            
+              <tr>
+                  <th scope="col" class="px-6 py-3">First Name</th>
+                  <th scope="col" class="px-6 py-3">Last Name</th>
+                  <th scope="col" class="px-6 py-3">Personalized video</th>
+                  <th scope="col" class="px-6 py-3">Telephone</th>
+                  <th scope="col" class="px-6 py-3">Email</th>
+                  <th scope="col" class="px-6 py-3"><span class="sr-only">Show</span></th>
+              </tr>
+          </thead>
+            <tbody>
+              
+              <ng-container *ngFor="let item of dataList">
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                   <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ item.firstName }}</td>
+                  <td   class="px-6 py-4">{{ item.lastName }}</td>
+                  <td class="px-6 py-4">
+                    <a (click)="ShowPersonnalizedVideo(item.videoPath)">{{ item.videoPath }}</a>
+                  </td>
+                  <td   class="px-6 py-4">{{ item.telephone }}</td>
+                  <td   class="px-6 py-4">{{ item.email }}</td>
+                  <td class="px-6 py-4 text-right">
+                    <a  [routerLink]="['/VideoPersonalization/VideoPersonalization', item.videoPath]" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Show</a>
+                  </td>
+                </tr>
+              </ng-container>
+              
+               
+            </tbody>
+        </table>
+       <pagination-controls *ngIf="dataList.length > itemsPerPage" (pageChange)="onPageChange($event)"></pagination-controls>
+      </div>
+      <ng-template #noDataMessage>
+        <div class="flex justify-center items-center h-full">
+          <p class="text-gray-500 dark:text-gray-400 text-center font-bold text-lg">
+            No data available yet.
+          </p>
+        </div>
+      </ng-template>
+      
+        </div>
+      </div>
+    </ng-container>
+  </div>
+ 
+  <div *ngIf="errorMessage" class="fixed inset-0 flex items-end justify-end px-4 py-6 pointer-events-none sm:p-6">
+    <div class="max-w-sm w-full bg-red-100 dark:bg-red-700 shadow-lg rounded-lg pointer-events-auto">
+      <div class="rounded-lg shadow-xs overflow-hidden">
+        <div class="p-4">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="h-6 w-6 text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938-2H14m-6.364 5.657a2 2 0 010-2.828L17.172 4.05a2 2 0 012.828 0l.828.828a2 2 0 010 2.828L8.464 18.535a2 2 0 01-2.828 0l-.828-.828zM9 13h.01" />
+              </svg>
+            </div>
+            <div class="ml-3 w-0 flex-1 pt-0.5">
+              <p class="text-sm font-medium text-red-800 dark:text-red-300">{{ errorMessage }}</p>
+            </div>
+            <div class="ml-4 flex-shrink-0 flex">
+              <button (click)="errorMessage = null" class="inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150">
+                <!-- Heroicon name: x -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 5.293a1 1 0 011.414 0L10 8.586l3.293-3.293a1 1 0 111.414 1.414L11.414 10l3.293 3.293a1 1 0 01-1.414 1.414L10 11.414l-3.293 3.293a1 1 0 01-1.414-1.414L8.586 10 5.293 6.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+

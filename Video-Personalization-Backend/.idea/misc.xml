@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Eureka-Server" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Video/pom.xml" />
+        <option value="$PROJECT_DIR$/VideoOrigine/pom.xml" />
+        <option value="$PROJECT_DIR$/uploadVideo/pom.xml" />
+        <option value="$PROJECT_DIR$/Generated_personalized_video/pom.xml" />
+        <option value="$PROJECT_DIR$/uploadVideos/pom.xml" />
+        <option value="$PROJECT_DIR$/PrimaryVideo/pom.xml" />
+        <option value="$PROJECT_DIR$/pythonProject6/pom.xml" />
+        <option value="$PROJECT_DIR$/Generated_videos/pom.xml" />
+        <option value="$PROJECT_DIR$/Eureka-Server/pom.xml" />
+        <option value="$PROJECT_DIR$/end-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/Generated-Videos/pom.xml" />
+        <option value="$PROJECT_DIR$/generated-video-service/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/manageaccount/pom.xml" />
+        <option value="$PROJECT_DIR$/account-service/pom.xml" />
+        <option value="$PROJECT_DIR$/manageaccount-service/pom.xml" />
+        <option value="$PROJECT_DIR$/user_service/pom.xml" />
+        <option value="$PROJECT_DIR$/email-service/pom.xml" />
+        <option value="$PROJECT_DIR$/client_list_service/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Generated_personalized_video/pom.xml" />
+        <option value="$PROJECT_DIR$/Generated_videos/pom.xml" />
+        <option value="$PROJECT_DIR$/Video/pom.xml" />
+        <option value="$PROJECT_DIR$/VideoOrigine/pom.xml" />
+        <option value="$PROJECT_DIR$/account-service/pom.xml" />
+        <option value="$PROJECT_DIR$/client_list_service/pom.xml" />
+        <option value="$PROJECT_DIR$/end-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/generated-video-service/pom.xml" />
+        <option value="$PROJECT_DIR$/manageaccount-service/pom.xml" />
+        <option value="$PROJECT_DIR$/manageaccount/pom.xml" />
+        <option value="$PROJECT_DIR$/pythonProject6/pom.xml" />
+        <option value="$PROJECT_DIR$/uploadVideo/pom.xml" />
+        <option value="$PROJECT_DIR$/uploadVideos/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,62 @@
+/* Container Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default to 1 column */
+    gap: 24px; /* Gap between elements */
+  }
+  
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  /* Card Styles */
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px; /* Padding inside the card */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Rounded corners */
+  }
+  
+  /* Icon Wrapper Styles */
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px; /* Icon wrapper height */
+    width: 48px; /* Icon wrapper width */
+    border-radius: 50%;
+  }
+  
+  /* Icon Styles */
+  .icon-wrapper svg {
+    height: 24px; /* Icon size */
+    width: 24px; /* Icon size */
+  }
+  
+  /* Text Styles */
+  .card .block.text-3xl {
+    font-size: 1.875rem; /* Increased font size for the value */
+    font-weight: bold;
+  }
+  
+  .card .block.text-gray-500 {
+    color: #6B7280; /* Tailwind's gray-500 color */
+  }
+  
+  .card .block.mt-2 {
+    margin-top: 0.5rem; /* Margin top for spacing */
+  }
+  
+  .text-red-600 {
+    color: #DC2626; /* Tailwind's red-600 color */
+  }
+  
+  .text-green-600 {
+    color: #16A34A; /* Tailwind's green-600 color */
+  }
+  

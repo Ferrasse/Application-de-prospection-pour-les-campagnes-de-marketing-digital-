@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3e5a5bd-5aa0-49b7-81c2-310e223e0760" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/src/main/java/com/coldOutreachApp/emailService/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/src/main/java/com/coldOutreachApp/emailService/controller/EmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/src/main/java/com/coldOutreachApp/emailService/controller/SMSController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/src/main/java/com/coldOutreachApp/emailService/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Alexandra.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Anne.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Cassandra.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Elena.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Fatima.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Lina.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Mary.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Olivia.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/Sara.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/uploads/perseur-viseur-pub_-video-publicitaire.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/uploads/perseur-viseur-pub_-video-publicitaire.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/uploads/videoPrimairemp4_-_Trim.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personalization-flask-service/uploads/videoPrimairemp4_-_Trim.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/Credentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/DTO/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/KeycloakConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/UserServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/controller/KeyCloakController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/service/KeyCloakService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/java/com/qrebl/users/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_service/src/test/java/com/qrebl/users/UserServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generated-Videos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Generated-Videos/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimaryVideo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PrimaryVideo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimaryVideo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PrimaryVideo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-list-service/src/main/java/com/coldOutreachApp/clientListService/entity/ClientList.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-list-service/src/main/java/com/coldOutreachApp/clientListService/entity/ClientList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-list-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/client-list-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/Jeanne.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/Racha.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/Racha.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/VideoFinal3.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/VideoFinal3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/audioF.wav" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/audioF.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/audioF_modified.wav" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/audioF_modified.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/audioF_modified_final.wav" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/audioF_modified_final.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/audios/audio_17.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/audios/audio_20.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/audios/audio_34.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/output.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/output.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/uploads/FilleVideo_-_Trim.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/video3.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalization-flask-service/video3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_1.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_10.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_11.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_12.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_13.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_14.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_15.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_16.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_17.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_17_new.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_18.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_19.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_2.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_20.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_20_new.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_21.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_22.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_23.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_24.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_25.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_26.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_27.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_28.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_29.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_3.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_30.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_31.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_32.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_33.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_34.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_34_new.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_35.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_36.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_4.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_5.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_6.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_7.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_8.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalization-flask-service/videos/segment_9.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/coldOutreachApp/userService/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/src/main/java/com/coldOutreachApp/emailService/EmailServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/coldOutreachApp/userService/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/coldOutreachApp/userService/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/coldOutreachApp/userService/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/coldOutreachApp/userService/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/coldOutreachApp/userService/service/KeycloakAdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/coldOutreachApp/userService/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/Eureka-Server">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Dockerfile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="configuration-microservice" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2dzscsHhoKlGGLyGOBB0GHMpZmv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in PrimaryVideo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in uploadVideo (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in uploadVideo (2).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in uploadVideo (3).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in uploadVideo (4).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in uploadVideo (5).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in uploadVideo.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Generated_videos [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.PrimaryVideo [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.PrimaryVideo [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.VideoPersonalization [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.email-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.email-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ClientListServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ClientListServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EmailServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EndUserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GeneratedVideosApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GeneratedVideosApplication (2).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GeneratedVideosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PrimaryVideo.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UploadVideoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication (2).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication (3).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.VideoOrigineApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;User__Admin__dashboards&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pc/IdeaProjects/VideoPersonalization/personalization-flask-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.34252873&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.coldOutreachApp.userService.service" />
+      <recent name="com.zagomail.enduserservice" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\IdeaProjects\VideoPersonalization\personalization-flask-service" />
+      <recent name="C:\Users\pc\IdeaProjects\VideoPersonalization" />
+      <recent name="C:\Users\pc\IdeaProjects\VideoPersonalization\user-service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.coldOutreachApp.emailService.config" />
+      <recent name="config" />
+      <recent name="demo.uploadVideo.configuration" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.EmailServiceApplication">
+    <configuration name="UserServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qrebl.users.UserServiceApplication" />
+      <module name="user_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qrebl.users.Repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in PrimaryVideo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PrimaryVideo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in uploadVideo (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="uploadVideo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in uploadVideo (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="uploadVideo (1)" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="manageaccount" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
+      <module name="manageaccount" />
+      <QsMavenRunConfiguration>
+        <MavenSettings>
+          <option name="myGeneralSettings" />
+          <option name="myRunnerSettings" />
+          <option name="myRunnerParameters">
+            <MavenRunnerParameters>
+              <option name="cmdOptions" />
+              <option name="profiles">
+                <set />
+              </option>
+              <option name="goals">
+                <list>
+                  <option value="quarkus:dev" />
+                </list>
+              </option>
+              <option name="multimoduleDir" />
+              <option name="pomFileName" value="pom.xml" />
+              <option name="profilesMap">
+                <map />
+              </option>
+              <option name="projectsCmdOptionValues">
+                <list />
+              </option>
+              <option name="resolveToWorkspace" value="false" />
+              <option name="workingDirPath" value="$PROJECT_DIR$/manageaccount" />
+            </MavenRunnerParameters>
+          </option>
+        </MavenSettings>
+        <targetMavenLocalRepo />
+        <emulateTerminal>false</emulateTerminal>
+      </QsMavenRunConfiguration>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientListServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="user-service (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.coldOutreachApp.clientListService.ClientListServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientListServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="user-service (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.coldOutreachApp.clientListService.ClientListServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="email-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.coldOutreachApp.emailService.EmailServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coldOutreachApp.emailService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EndUserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="end-user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zagomail.enduserservice.EndUserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Eureka-Server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zagomail.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zagomail.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneratedVideosApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="Generated-Videos" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zagomail.generatedvideos.GeneratedVideosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneratedVideosApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="Generated-Videos" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zagomail.generatedvideos.GeneratedVideosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneratedVideosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="Generated_videos" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zagomail.generated_videos.GeneratedVideosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrimaryVideo" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="PrimaryVideo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="demo.uploadVideo.UploadVideoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadVideoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="PrimaryVideo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="demo.uploadVideo.UploadVideoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadVideoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="uploadVideo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="demo.uploadVideo.UploadVideoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service (2)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.coldOutreachApp.userService.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service (3)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.coldOutreachApp.userService.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qrebl.users.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.coldOutreachApp.userService.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoOrigineApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="VideoOrigine" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zagomail.videoorigine.VideoOrigineApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.UserServiceApplication" />
+      <item itemvalue="JUnit.All in PrimaryVideo" />
+      <item itemvalue="JUnit.All in uploadVideo (4)" />
+      <item itemvalue="JUnit.All in uploadVideo (5)" />
+      <item itemvalue="Quarkus.manageaccount" />
+      <item itemvalue="Spring Boot.ClientListServiceApplication (1)" />
+      <item itemvalue="Spring Boot.UserServiceApplication (1)" />
+      <item itemvalue="Spring Boot.UserServiceApplication (2)" />
+      <item itemvalue="Spring Boot.UserServiceApplication (3)" />
+      <item itemvalue="Spring Boot.ClientListServiceApplication" />
+      <item itemvalue="Spring Boot.GeneratedVideosApplication (2)" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.EndUserServiceApplication" />
+      <item itemvalue="Spring Boot.GeneratedVideosApplication (1)" />
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.GeneratedVideosApplication" />
+      <item itemvalue="Spring Boot.PrimaryVideo" />
+      <item itemvalue="Spring Boot.UploadVideoApplication" />
+      <item itemvalue="Spring Boot.UploadVideoApplication (1)" />
+      <item itemvalue="Spring Boot.VideoOrigineApplication" />
+      <item itemvalue="Spring Boot.EmailServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.EmailServiceApplication" />
+        <item itemvalue="Application.UserServiceApplication" />
+        <item itemvalue="JUnit.All in PrimaryVideo" />
+        <item itemvalue="JUnit.All in uploadVideo (5)" />
+        <item itemvalue="JUnit.All in uploadVideo (4)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="jdk-17.0.10-graalvm-jdk-17.0.10-4caba194b151-6d8b2ca1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3e5a5bd-5aa0-49b7-81c2-310e223e0760" name="Changes" comment="" />
+      <created>1711022327792</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711022327792</updated>
+      <workItem from="1711022328892" duration="5816000" />
+      <workItem from="1711064596500" duration="34733000" />
+      <workItem from="1711753438564" duration="11124000" />
+      <workItem from="1712107837405" duration="6347000" />
+      <workItem from="1712589510154" duration="6480000" />
+      <workItem from="1712880321109" duration="1311000" />
+      <workItem from="1712964193787" duration="4596000" />
+      <workItem from="1714124045274" duration="2610000" />
+      <workItem from="1714264373383" duration="699000" />
+      <workItem from="1714319789759" duration="3142000" />
+      <workItem from="1714387971395" duration="7585000" />
+      <workItem from="1714428028274" duration="9915000" />
+      <workItem from="1714528903003" duration="3961000" />
+      <workItem from="1714852396592" duration="1120000" />
+      <workItem from="1714855475796" duration="5212000" />
+      <workItem from="1715030910219" duration="1517000" />
+      <workItem from="1715108454291" duration="1797000" />
+      <workItem from="1715114407352" duration="4624000" />
+      <workItem from="1715119157539" duration="8208000" />
+      <workItem from="1715137828061" duration="19215000" />
+      <workItem from="1715208642646" duration="54921000" />
+      <workItem from="1715382919346" duration="2065000" />
+      <workItem from="1715427748263" duration="3000" />
+      <workItem from="1715427772382" duration="34882000" />
+      <workItem from="1716056773915" duration="6990000" />
+      <workItem from="1716138514500" duration="14290000" />
+      <workItem from="1716219606362" duration="18602000" />
+      <workItem from="1716329978745" duration="37971000" />
+      <workItem from="1716493555257" duration="18900000" />
+      <workItem from="1716722230393" duration="32400000" />
+      <workItem from="1716966888812" duration="1235000" />
+      <workItem from="1716972477986" duration="11903000" />
+      <workItem from="1717014513767" duration="5477000" />
+      <workItem from="1717068531073" duration="10796000" />
+      <workItem from="1717152577028" duration="1390000" />
+      <workItem from="1717598355732" duration="10000" />
+      <workItem from="1717602941535" duration="8329000" />
+      <workItem from="1717658896550" duration="2476000" />
+      <workItem from="1717667685614" duration="1421000" />
+      <workItem from="1717669521539" duration="17669000" />
+      <workItem from="1717707656253" duration="4601000" />
+      <workItem from="1717720484513" duration="1186000" />
+      <workItem from="1717721762698" duration="2579000" />
+      <workItem from="1717725326857" duration="1557000" />
+      <workItem from="1717854514614" duration="6785000" />
+      <workItem from="1718224513252" duration="620000" />
+      <workItem from="1718848898200" duration="678000" />
+      <workItem from="1719024251751" duration="1028000" />
+      <workItem from="1719236832960" duration="3762000" />
+      <workItem from="1719511349323" duration="1899000" />
+      <workItem from="1719936173661" duration="1036000" />
+      <workItem from="1722557227585" duration="209000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Eureka-Server/src/main/java/com/zagomail/eurekaserver/EurekaServerApplication.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

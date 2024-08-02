@@ -1,0 +1,182 @@
+
+<div nz-row nzGutter="25">
+  <!-- skeleton -->
+  <ng-template #loadingSkeleton>
+    <nz-skeleton class="bg-white dark:bg-white/10 rounded-6 p-[30px] pt-[15px]" [nzShape]="circle" [nzActive]="true"
+      [nzParagraph]="{ rows: 6 }"></nz-skeleton>
+  </ng-template>
+  <!-- skeleton -->
+
+  <div nz-col nzMd="12" nzXs="24">
+    <!-- New project added -->
+    <div class="flex items-center justify-end max-md:justify-center">
+     <button class="flex items-center px-[25px] text-sm text-white rounded-md font-semibold bg-primary border-primary h-11 gap-[6px]" nz-button (click)="showNewVideo(newVideoUpload)">
+       <i nz-icon nzType="upload"></i>
+       <span class="m-0">Upolad video</span>
+     </button>
+    </div>
+    <ng-template #newVideoUpload>
+      <form nz-form nzLayout="vertical">
+     
+        <div nz-row nzGutter="25">
+          <div nz-col nzMd="12">
+          
+          </div>
+          <div nz-col nzMd="12">
+           
+          </div>
+        </div>
+      </form>
+    </ng-template>
+    <!-- :End New project added -->
+  </div>
+ 
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+        <div class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Upoload original Video & Csv file</h4>
+        </div>
+        <div class="p-[25px]">
+          <form nz-form (ngSubmit)="onSubmitForm1()" enctype="multipart/form-data">
+            <nz-form-item class="mb-[25px]">
+             
+              <nz-form-control nzLg="16" nzMd="15" nzXs="24">
+                <nz-upload
+                  class="w-full"
+                  nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                  [nzHeaders]="{ authorization: 'authorization-text' }"
+                  (nzChange)="onVideoFileSelected($event)"
+                  [nzFileList]="fileList"
+                  [nzAccept]="'video/mp4'"
+                >
+                <button nz-button class="text-theme-gray dark:text-white/60 flex capitalize items-center justify-between h-[50px] border-normal border-1 dark:border-white/10 rounded-4 px-[20px] py-5px w-full">
+                  <span>select video url</span>
+                  <span class="flex items-center h-full ltr:border-l-1 rtl:border-r-1 border-normal dark:border-white/10 ps-[25px]">Browse</span>
+                  </button>
+                </nz-upload>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+        
+              <nz-form-control nzLg="16" nzMd="15" nzXs="24">
+                <nz-upload
+                  class="w-full"
+                  nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                  [nzHeaders]="{ authorization: 'authorization-text' }"
+                  (nzChange)="onCSVFileSelected($event)"
+                  [nzFileList]="fileList"
+                >
+                  <button nz-button class="text-theme-gray dark:text-white/60 flex capitalize items-center justify-between h-[50px] border-normal border-1 dark:border-white/10 rounded-4 px-[20px] py-5px w-full">
+            <span>select Csv file</span>
+            <span class="flex items-center h-full ltr:border-l-1 rtl:border-r-1 border-normal dark:border-white/10 ps-[25px]">Browse</span>
+          </button>
+                </nz-upload>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item nzJustify="end">
+              <nz-form-control nzLg="16" nzMd="15" nzXs="24">
+                <div class="flex flex-wrap gap-[15px]">
+                  <button nz-button nzType="default" class="bg-theme-gray/10 dark:bg-white30 hover:bg-gray-hbr dark:hover:bg-white/10 border-none text-theme-gray dark:text-white/60 hover:text-white text-[14px] font-semibold leading-[22px] inline-flex items-center justify-center rounded-[4px] px-[20px] h-[44px] duration-300">
+                    <span>Cancel</span>
+                  </button>
+                  <button type="submit" nz-button nzType="primary" class="bg-primary hover:bg-primary-hbr border-solid border-1 border-primary text-white dark:text-white/[.87] text-[14px] font-semibold leading-[22px] inline-flex items-center justify-center rounded-[4px] px-[20px] h-[44px] duration-300">
+                    <span>Upload</span>
+                  </button>
+                </div>
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+        </div>
+      </div>
+    </ng-container>
+    
+    
+  </div>
+  <div nz-col nzXs="24" nzXXl="12" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+      class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+      <div class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+        <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Keywords Definition</h4>
+      </div>
+      <div class="p-[25px]">
+        <div *ngIf="showVideo">  
+          <div class="content">
+            <video id="myVideo" width="640" height="360" controls (mouseover)="handleVideoMouseOver($event)">
+              <source [src]="data_url" type="video/mp4">
+            </video>
+          </div> 
+
+          <div id="tooltip" (mouseover)="cancelHideTooltip()" (mouseout)="hideTooltip($event)">
+            <label for="keywordInput">Keyword:</label>
+            <input type="text" id="keywordInput" [(ngModel)]="Selectedkeyword">
+            <button nz-button class=" bg-theme-gray/10 dark:bg-white30 hover:bg-gray-hbr dark:hover:bg-white/10 border-none text-theme-gray dark:text-white/60 hover:text-white text-[14px] font-semibold leading-[22px] inline-flex items-center justify-center rounded-[4px] px-[20px] h-[44px] duration-300" (click)="addOrModifyKeyword()">Add/Modify</button>
+        </div>
+        
+
+          <div id="keywordsList">
+            <h2>Added Keywords:</h2>
+            <ul id="keywordsUl">
+              <li *ngFor="let keyword of addedKeywords">{{ keyword }}</li>
+            </ul>
+          </div>
+          
+
+       <button nz-button class=" bg-theme-gray/10 dark:bg-white30 hover:bg-gray-hbr dark:hover:bg-white/10 border-none text-theme-gray dark:text-white/60 hover:text-white text-[14px] font-semibold leading-[22px] inline-flex items-center justify-center rounded-[4px] px-[20px] h-[44px] duration-300" onclick="processVideoWithKeywords()">Send</button>       
+      </div>
+    </div>
+    <div id="form2Loading" style="display:none; margin-left: 30px;">Is Loading ...</div>
+    </div>
+    </ng-container>
+  </div>
+  <div nz-col nzXs="24" class="mb-[25px]">
+    <ng-container *ngIf="showContent; else loadingSkeleton">
+      <div
+        class="bg-white dark:bg-white/10 m-0 p-0 text-theme-gray dark:text-white/60 text-[15px] rounded-10 relative h-full">
+        <div class="py-[16px] px-[25px] text-dark dark:text-white/[.87] font-medium text-[17px] border-regular dark:border-white/10 border-b">
+          <h4 class="mb-0 text-lg font-medium text-dark dark:text-white/[.87]">Multiple column</h4>
+        </div>
+        <div class="p-[25px]">
+          <form nz-form>
+            <nz-form-item nzGutter="25" class="mb-0">
+              <nz-form-control nzLg="12" nzMd="12" nzXs="24" class="mb-[25px]">
+                <input class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60" nz-input name="name" type="text" placeholder="First Name">
+              </nz-form-control>
+              <nz-form-control nzLg="12" nzMd="12" nzXs="24" class="mb-[25px]">
+                <input class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60" nz-input name="text" type="email" placeholder="Last Name">
+              </nz-form-control>
+            </nz-form-item >
+            <nz-form-item nzGutter="25" class="mb-0">
+              <nz-form-control nzLg="12" nzMd="12" nzXs="24" class="mb-[25px]">
+                <input class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60" nz-input name="name" type="text" placeholder="City">
+              </nz-form-control>
+              <nz-form-control nzLg="12" nzMd="12" nzXs="24" class="mb-[25px]">
+                <input class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60" nz-input name="text" type="text" placeholder="Country">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item nzGutter="25" class="mb-0">
+              <nz-form-control nzLg="12" nzMd="12" nzXs="24" class="mb-[25px]">
+                <input class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60" nz-input name="name" type="text" placeholder="Company">
+              </nz-form-control>
+              <nz-form-control nzLg="12" nzMd="12" nzXs="24" class="mb-[25px]">
+                <input class="w-full rounded-4 border-normal border-1 text-[15px] dark:bg-white/10 dark:border-white/10 px-[20px] py-[12px] min-h-[50px] outline-none placeholder:text-[#A0A0A0] text-theme-gray dark:text-white/60" nz-input name="text" type="email" placeholder="Email">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-control>
+                <div class="flex flex-wrap gap-[15px]">
+                  <button nz-button class=" bg-theme-gray/10 dark:bg-white30 hover:bg-gray-hbr dark:hover:bg-white/10 border-none text-theme-gray dark:text-white/60 hover:text-white text-[14px] font-semibold leading-[22px] inline-flex items-center justify-center rounded-[4px] px-[20px] h-[44px] duration-300">
+                    <span>Cancel</span>
+                  </button>
+                  <button nz-button class="bg-primary hover:bg-primary-hbr border-solid border-1 border-primary text-white dark:text-white/[.87] text-[14px] font-semibold leading-[22px] inline-flex items-center justify-center rounded-[4px] px-[20px] h-[44px] duration-300">
+                    <span>Save</span>
+                  </button>
+                </div>
+              </nz-form-control>
+            </nz-form-item >
+          </form>
+        </div>
+      </div>
+    </ng-container>
+  </div>

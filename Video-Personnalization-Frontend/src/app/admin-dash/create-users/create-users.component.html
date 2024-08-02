@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Dashboard</title>
+</head>
+<body class="relative bg-gray-100 overflow-hidden max-h-screen">
+ 
+<app-commonlayoutadmin></app-commonlayoutadmin>
+  <main class="ml-60 pt-16 pb-10 max-h-screen overflow-auto bg-gray-50">
+ <!-- user-list.component.html -->
+<div class="mt-8 mx-6">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-3xl font-semibold text-gray-700">List of Custumers</h1>
+    <button class="inline-flex items-center px-4 py-2 bg-gradient-to-tr from-indigo-600 to-teal-600 text-white rounded-lg shadow-md" (click)="createNewClient(newUserAccount)">
+      <svg class="h-6 w-6 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+      </svg>
+      Create New Custumer
+    </button>
+  </div>
+
+
+
+  <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+    <table class="min-w-full bg-white">
+      <thead class="bg-gray-50">
+        <tr class="bg-gradient-to-tr from-indigo-600 to-teal-600 rounded-md py-2 px-4 text-white font-bold text-md">
+          <th class="text-left p-3 px-5">Name</th>
+          <th class="text-left p-3 px-5">Email</th>
+          <th class="text-left p-3 px-5">Role</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <tr *ngFor="let user of users">
+          <td class="px-6 py-4 whitespace-nowrap">
+            {{ user.password}}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap">
+            {{ user.emailId }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap">
+            {{ user.role }}
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+            <button class="text-indigo-600 hover:text-indigo-900">Update</button>
+            <button class="text-red-600 hover:text-red-900 ml-4" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #newUserAccount>
+  <form nz-form [formGroup]="createUserForm" (ngSubmit)="onSubmitForm()">
+    <!-- Modal Template -->
+
+    
+      <div class="modal-body">
+        <form [formGroup]="createUserForm" (ngSubmit)="onSubmitForm()">
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" formControlName="firstname" placeholder="Enter your first name" />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" formControlName="lastName" placeholder="Enter your last name" />
+          </div>
+          <div class="form-group">
+            <label for="emailId">Email</label>
+            <input type="emailId" id="emailId" formControlName="emailId" placeholder="Enter your email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" placeholder="Enter your password" />
+          </div>
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" formControlName="role">
+              <option value="Custumer">Custumer</option>
+              
+            </select>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="submit-button" [disabled]="createUserForm.invalid">Create</button>
+          </div>
+        </form>
+      </div>
+ 
+
+
+  </form>
+  
+</ng-template>
+
+
+  </main>
+
+</body>
+</html>

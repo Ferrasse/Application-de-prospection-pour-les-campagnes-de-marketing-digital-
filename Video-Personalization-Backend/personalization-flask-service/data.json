@@ -1,0 +1,252 @@
+[
+    {
+        "word": "Salut",
+        "start": 0.0,
+        "end": 0.36
+    },
+    {
+        "word": "Cassandra",
+        "start": 0.36,
+        "end": 0.9
+    },
+    {
+        "word": "!",
+        "start": 0.9,
+        "end": 1.2
+    },
+    {
+        "word": "C",
+        "start": 1.2,
+        "end": 1.28
+    },
+    {
+        "word": "'est",
+        "start": 1.28,
+        "end": 1.4
+    },
+    {
+        "word": "C\u00e9line,",
+        "start": 1.4,
+        "end": 1.66
+    },
+    {
+        "word": "votre",
+        "start": 1.78,
+        "end": 1.92
+    },
+    {
+        "word": "r\u00e9g\u00e9rie",
+        "start": 1.92,
+        "end": 2.24
+    },
+    {
+        "word": "bricolage.",
+        "start": 2.24,
+        "end": 2.74
+    },
+    {
+        "word": "Quel",
+        "start": 2.96,
+        "end": 3.04
+    },
+    {
+        "word": "est",
+        "start": 3.04,
+        "end": 3.14
+    },
+    {
+        "word": "l",
+        "start": 3.14,
+        "end": 3.2
+    },
+    {
+        "word": "'outil",
+        "start": 3.2,
+        "end": 3.5
+    },
+    {
+        "word": "indispensable",
+        "start": 3.5,
+        "end": 4.24
+    },
+    {
+        "word": "\u00e0",
+        "start": 4.24,
+        "end": 4.5
+    },
+    {
+        "word": "avoir",
+        "start": 4.5,
+        "end": 4.7
+    },
+    {
+        "word": "chez",
+        "start": 4.7,
+        "end": 4.92
+    },
+    {
+        "word": "soi",
+        "start": 4.92,
+        "end": 5.1
+    },
+    {
+        "word": "?",
+        "start": 5.1,
+        "end": 5.36
+    },
+    {
+        "word": "La",
+        "start": 5.36,
+        "end": 5.52
+    },
+    {
+        "word": "perceuse",
+        "start": 5.52,
+        "end": 5.82
+    },
+    {
+        "word": "viseuse",
+        "start": 5.82,
+        "end": 6.16
+    },
+    {
+        "word": "Parkside",
+        "start": 6.16,
+        "end": 6.6
+    },
+    {
+        "word": "bien",
+        "start": 6.6,
+        "end": 6.88
+    },
+    {
+        "word": "s\u00fbr.",
+        "start": 6.88,
+        "end": 7.04
+    },
+    {
+        "word": "Dans",
+        "start": 7.26,
+        "end": 7.34
+    },
+    {
+        "word": "ce",
+        "start": 7.34,
+        "end": 7.54
+    },
+    {
+        "word": "coffret",
+        "start": 7.54,
+        "end": 7.92
+    },
+    {
+        "word": "apr\u00e8s",
+        "start": 7.92,
+        "end": 8.16
+    },
+    {
+        "word": "accessible,",
+        "start": 8.16,
+        "end": 8.72
+    },
+    {
+        "word": "vous",
+        "start": 8.96,
+        "end": 9.0
+    },
+    {
+        "word": "y",
+        "start": 9.0,
+        "end": 9.18
+    },
+    {
+        "word": "trouverez",
+        "start": 9.18,
+        "end": 9.68
+    },
+    {
+        "word": "bien",
+        "start": 9.68,
+        "end": 9.68
+    },
+    {
+        "word": "s\u00fbr",
+        "start": 9.68,
+        "end": 9.94
+    },
+    {
+        "word": "son",
+        "start": 9.94,
+        "end": 10.16
+    },
+    {
+        "word": "chargeur,",
+        "start": 10.16,
+        "end": 11.02
+    },
+    {
+        "word": "sa",
+        "start": 11.46,
+        "end": 11.6
+    },
+    {
+        "word": "batterie",
+        "start": 11.6,
+        "end": 12.12
+    },
+    {
+        "word": "et",
+        "start": 12.12,
+        "end": 12.34
+    },
+    {
+        "word": "dans",
+        "start": 12.34,
+        "end": 12.52
+    },
+    {
+        "word": "cette",
+        "start": 12.52,
+        "end": 12.66
+    },
+    {
+        "word": "bo\u00eete",
+        "start": 12.66,
+        "end": 13.18
+    },
+    {
+        "word": "son",
+        "start": 13.18,
+        "end": 13.46
+    },
+    {
+        "word": "set",
+        "start": 13.46,
+        "end": 13.68
+    },
+    {
+        "word": "d",
+        "start": 13.68,
+        "end": 13.88
+    },
+    {
+        "word": "'embout",
+        "start": 13.88,
+        "end": 14.18
+    },
+    {
+        "word": "et",
+        "start": 14.18,
+        "end": 14.38
+    },
+    {
+        "word": "de",
+        "start": 14.38,
+        "end": 14.58
+    },
+    {
+        "word": "for\u00eat.",
+        "start": 14.58,
+        "end": 14.76
+    }
+]

@@ -1,0 +1,101 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Dashboard</title>
+</head>
+<body class="relative bg-gray-100 overflow-hidden max-h-screen">
+<app-commonlayoutadmin></app-commonlayoutadmin>
+
+
+    <!-- content of the dashboard -->
+    <main class="ml-60 pt-16 max-h-screen overflow-auto">
+        
+        <div class="ml-4 mr-4 mt-10" >
+
+
+              
+              
+
+              <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 bg-white shadow rounded-lg flex items-center justify-between">
+                  <div>
+                    <span class="block text-3xl font-bold">{{totalUsers}}</span>
+                    <span class="block text-gray-500">New Users</span>
+                    <span class="block text-green-600 mt-2">
+                      <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="inline h-5 w-5 mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 19l7-7-7-7" />
+                      </svg>
+                    
+                    </span>
+                  </div>
+                 
+                  
+                  <div class="icon-wrapper inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-purple-600 bg-purple-100 rounded-full mr-6">
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-10 w-10">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="card p-6 bg-white shadow rounded-lg flex items-center justify-between">
+                  <div>
+                    <span class="block text-3xl font-bold">{{totalUsers}}</span>
+                    <span class="block text-gray-500">New Customers</span>
+                    <span class="block text-green-600 mt-2">
+                      <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="inline h-5 w-5 mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 19l7-7-7-7" />
+                      </svg>
+                     
+                    </span>
+                  </div>
+                 
+                  
+                  <div class="icon-wrapper inline-flex flex-shrink-0 items-center justify-center h-20 w-20 text-teal-600 bg-teal-100 rounded-full mr-6">
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-10 w-10">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </section>
+              
+              
+        </div>
+
+
+        <div class="mr-4 ml-4 mt-4 bg-white shadow overflow-hidden sm:rounded-lg">
+          <table class="min-w-full bg-white">
+            <thead class="bg-gray-50">
+              <tr class="bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-md py-2 px-4 text-white font-bold text-md">
+                <th class="text-left p-3 px-5">Name</th>
+                <th class="text-left p-3 px-5">Email</th>
+                <th class="text-left p-3 px-5">Role</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <tr *ngFor="let user of users">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  {{ user.password}}
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  {{ user.emailId }}
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  {{ user.role }}
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                  <button class="text-indigo-600 hover:text-indigo-900">Update</button>
+                  <button class="text-red-600 hover:text-red-900 ml-4" (click)="deleteUser(user.id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </main>
+  </body>
+  

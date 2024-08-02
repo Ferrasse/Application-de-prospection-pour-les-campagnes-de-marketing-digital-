@@ -1,0 +1,35 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: r1
+          uri: http://localhost:8060/
+          predicates:
+            - Path=/api/videos/**
+        - id: r2
+          uri: http://localhost:5000/
+          predicates:
+            - Path=/**
+        - id: r2
+          uri: http://localhost:8097/
+          predicates:
+            - Path=/**
+        - id: r2
+          uri: http://localhost:8020/
+          predicates:
+            - Path=/**
+        - id: r2
+          uri: http://localhost:8086/
+          predicates:
+            - Path=/**
+        - id: r2
+          uri: http://localhost:8083/
+          predicates:
+            - Path=/**
+  application:
+    name: gateway-service
+  main:
+    web-application-type: reactive
+server:
+  port: 8888
+
