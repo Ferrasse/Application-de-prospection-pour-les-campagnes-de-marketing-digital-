@@ -22,7 +22,6 @@ pipeline {
             steps {
               // Run mutliple commands
               sh """
-              cd ${APPLICATION_DIR}
                cd Video-Personnalization-Frontend
               ansible-playbook playbook.yml
               """
