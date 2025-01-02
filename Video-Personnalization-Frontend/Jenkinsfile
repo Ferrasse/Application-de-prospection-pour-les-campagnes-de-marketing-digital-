@@ -5,6 +5,15 @@ pipeline {
 		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
 	}
     stages {
+      stage('Install Ansible') {
+    steps {
+        sh '''
+        sudo apt-get update
+        sudo apt-get install -y ansible
+        '''
+    }
+}
+
         stage('Docker Login') {
             steps {
                 // Add --password-stdin to run docker login command non-interactively
@@ -19,5 +28,6 @@ pipeline {
                 """
             }
         }
+      
     } 
 }
